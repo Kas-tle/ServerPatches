@@ -1,11 +1,11 @@
 repositories {
-    mavenLocal()
+    // mavenLocal()
     maven {
         url = uri("https://repo.papermc.io/repository/maven-public/")
     }
 
     maven {
-        url = uri("https://repo.codemc.io/repository/maven-releases/")
+        url = uri("https://jitpack.io")
     }
 }
 
@@ -16,7 +16,7 @@ configurations.named("shadow") {
 dependencies {
     shadow("org.bstats:bstats-bukkit:3.0.2")
     shadow("dev.dejvokep:boosted-yaml:1.3")
-    shadow("com.github.retrooper.packetevents:spigot:2.2.1") {
+    shadow("com.github.Kas-tle.packetevents:spigot:f3afef5") {
         exclude(group = "net.kyori")
     }
     compileOnly("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
@@ -44,6 +44,6 @@ tasks {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_16
-    targetCompatibility = JavaVersion.VERSION_16
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }

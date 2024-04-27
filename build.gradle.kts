@@ -12,13 +12,11 @@ subprojects {
     }
 
     version = "1.0.4"
-    java.sourceCompatibility = JavaVersion.VERSION_16
+    java.sourceCompatibility = JavaVersion.VERSION_17
 
     repositories {
-        mavenLocal()
-        maven {
-            url = uri("https://repo.maven.apache.org/maven2/")
-        }
+        // mavenLocal()
+        mavenCentral()
     }
 
     tasks {
